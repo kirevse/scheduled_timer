@@ -13,7 +13,6 @@ class ScheduledTimer:
         self.args = args if args is not None else []
         self.kwargs = kwargs if kwargs is not None else {}
         self.interval_type = interval_type
-        self.initial_delay = initial_delay
 
         self.timer = threading.Timer(initial_delay, self.__invoke, args, kwargs)
 
